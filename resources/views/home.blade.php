@@ -14,7 +14,17 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{ 'Welcome, ' . auth()->user()->last_name . '! ' . __('You are logged in!') }}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8 mt-5">
+            <div class="card">
+                <div class="card-header">{{ __('Select Project') }}</div>
+
+                <div class="card-body">
+                    <a href="{{ route('posts.index') }}">Posts project</a>
                 </div>
             </div>
         </div>

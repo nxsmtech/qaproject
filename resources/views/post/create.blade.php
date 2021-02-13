@@ -11,12 +11,22 @@
                         @error('title')
                         <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
+                        @error('image')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                        @error('body')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
 
-                        <form method="post" action="{{ route('posts.store') }}">
+                        <form method="post" action="{{ route('posts.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label class="label">Post Title: </label>
                                 <input type="text" name="title" class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                <label class="label">Image: </label>
+                                <input type="file" name="image" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label class="label">Post Body: </label>

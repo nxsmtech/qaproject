@@ -10,6 +10,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
+                        <img src="{{ url('/images/'. $post->image) }}" alt="" title="" style="width: 300px"/>
                         <h2>{{ $post->title }}</h2>
                         <p>{{ $post->body }}</p>
                     </div>

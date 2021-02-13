@@ -21,10 +21,20 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'body' => 'required',
+        ]);
+
+        $imageName = time().'.'.$request->image->extension();
+        $request->image->move(public_path('images'), $imageName);
+
         Post::create([
             'title' => $request->title,
             'slug' => \Str::slug($request->title),
             'body' => $request->body,
+            'image' => $imageName,
         ]);
 
         return redirect()->route('posts.index')->with('message', 'Post was successfully created');
