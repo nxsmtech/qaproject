@@ -17,7 +17,7 @@
                                 <div class="col-md-6">
                                     <input id="name" type="text"
                                            class="form-control @error('name') is-invalid @enderror" name="name"
-                                           value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                           value="{{ old('name') }}" autocomplete="name" autofocus>
 
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -110,8 +110,10 @@
                             <div class="form-group row">
                                 <label for="password-confirm"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+
+                                {{--                            TODO Testing - set #password-confirm type to password--}}
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control"
+                                    <input id="password-confirm" type="text" class="form-control"
                                            name="password_confirmation" autocomplete="new-password">
                                 </div>
                             </div>
@@ -140,11 +142,12 @@
 @endsection
 
 @push('scripts')
+{{--    TODO Testing - set corretct yearRange--}}
     <script>$(function () {
             $('.datepicker').datepicker({
                 changeMonth: true,
                 changeYear: true,
-                yearRange: "-18:+40"
+                yearRange: "-0:+40"
             });
         });
     </script>
