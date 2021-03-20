@@ -140,12 +140,11 @@
 @endsection
 
 @push('scripts')
-{{--    TODO Testing - set corretct yearRange--}}
     <script>$(function () {
             $('.datepicker').datepicker({
                 changeMonth: true,
                 changeYear: true,
-                yearRange: "-0:+40"
+                yearRange: "-18:+40"
             });
         });
     </script>
