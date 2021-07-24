@@ -39,7 +39,7 @@ class RegisterController extends Controller
     public function __construct()
     {
 //        TODO Testing - set middleware to guest
-//        $this->middleware('guest');
+        $this->middleware('guest');
     }
 
     /**
