@@ -67,8 +67,13 @@
                                        class="col-md-4 col-form-label text-md-right">{{ __('Confirm e-mail') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email-confirm" type="email" class="form-control"
-                                           name="email_confirmation" autocomplete="new-email">
+                                    <input id="email-confirm" type="email" class="form-control @error('email_confirmation') is-invalid @enderror"
+                                           name="email_confirmation" autocomplete="new-email" onpaste="return false;">
+                                    @error('email_confirmation')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
                                 </div>
                             </div>
 
