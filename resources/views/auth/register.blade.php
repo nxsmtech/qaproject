@@ -147,7 +147,7 @@
             $('.datepicker').datepicker({
                 changeMonth: true,
                 changeYear: true,
-                yearRange: "-0:+40"
+                yearRange: "-100:+40"
             });
         });
     </script>
