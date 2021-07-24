@@ -114,7 +114,7 @@
                                 {{--                            TODO Testing - set #password-confirm type to password--}}
                                 <div class="col-md-6">
                                     <input id="password-confirm" type="password" class="form-control"
-                                           name="password_confirmation" autocomplete="new-password">
+                                           name="password_confirmation" autocomplete="new-password" onpaste="return false;">
                                 </div>
                             </div>
 
@@ -142,7 +142,7 @@
 @endsection
 
 @push('scripts')
-{{--    TODO Testing - set corretct yearRange--}}
+    {{--    TODO Testing - set corretct yearRange--}}
     <script>$(function () {
             $('.datepicker').datepicker({
                 changeMonth: true,
