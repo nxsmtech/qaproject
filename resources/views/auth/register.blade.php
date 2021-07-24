@@ -67,7 +67,7 @@
                                        class="col-md-4 col-form-label text-md-right">{{ __('Confirm e-mail') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email-confirm" type="password" class="form-control"
+                                    <input id="email-confirm" type="email" class="form-control"
                                            name="email_confirmation" autocomplete="new-email">
                                 </div>
                             </div>
