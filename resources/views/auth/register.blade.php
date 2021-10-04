@@ -50,7 +50,7 @@
                                        class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email"
+                                    <input id="email" type="text"
                                            class="form-control @error('email') is-invalid @enderror" name="email"
                                            value="{{ old('email') }}" autocomplete="new-email">
 
@@ -68,7 +68,7 @@
 
                                 <div class="col-md-6">
                                     <input id="email-confirm" type="email" class="form-control @error('email_confirmation') is-invalid @enderror"
-                                           name="email_confirmation" autocomplete="new-email" onpaste="return false;">
+                                           name="email_confirmation" autocomplete="new-email">
                                     @error('email_confirmation')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -100,7 +100,7 @@
                                        class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password"
+                                    <input id="password" type="text"
                                            class="form-control @error('password') is-invalid @enderror" name="password"
                                            autocomplete="new-password">
 
@@ -118,7 +118,7 @@
 
                                 {{--                            TODO Testing - set #password-confirm type to password--}}
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control"
+                                    <input id="password-confirm" type="text" class="form-control"
                                            name="password_confirmation" autocomplete="new-password" onpaste="return false;">
                                 </div>
                             </div>
@@ -152,7 +152,7 @@
             $('.datepicker').datepicker({
                 changeMonth: true,
                 changeYear: true,
-                yearRange: "-100:+40"
+                yearRange: "-0:+40"
             });
         });
     </script>
